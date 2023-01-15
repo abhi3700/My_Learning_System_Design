@@ -11,6 +11,10 @@ Learn everything about Backend Engineering
   - Microservices using Docker, Kubernetes, Prometheus, Kafka, etc.
     ![](img/microservices-app.png)
 
+    > Microservices are not some magic which fixes all the problems. Still there are cases where monolithic approach is followed. For example, if you are building a small app, then you can go with monolithic approach. But if you are building a large app, then you should go with microservices approach. It's about **scalability** and **maintainability**.
+
+    ![](img/microservices-vs-monolithic.png)
+
 - The most common API types are:
   - REST API
   - GraphQL
