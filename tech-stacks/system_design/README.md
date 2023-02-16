@@ -51,6 +51,23 @@
   Imagine, there is a holiday planned for 3 friends & then 3 more friends join them. So, in order to accommodate more people, more cars of same size has to be hired. So, **the number of cars** is increased.
   ![](../../img/system_design_horizontal_scaling.png)
 
+---
+
+- [x] **Horizontal vs Vertical Scaling comparo**
+
+| Horizontal Scaling                                                         | Vertical Scaling                                   |
+| -------------------------------------------------------------------------- | -------------------------------------------------- |
+| Load balancing required                                                    | N/A                                                |
+| **Resilient**                                                              | Single point of failure                            |
+| Network calls (RPC)                                                        | Shared memory i.e. **inter-process communication** |
+| Data inconsistency i.e. delay in having the same data across all instances | Data **consistency**                               |
+| **Scales as users increases i.e. via adding more instances**               | Hardware limit                                     |
+
+> Now, the question is, when to use which scaling technique?
+>
+> Both are important. But, it depends on the use case. If the use case is such that the data is not changing frequently, then vertical scaling is better. But, if the data is changing frequently, then horizontal scaling is better. Moreover, keep a note of the bolded points in the table above.
+
+- [ ] Rate limiting
 - [ ] Load balancing
 - [ ] Microservices
 - [ ] Monolithic vs Microservices
@@ -62,3 +79,4 @@
 - [Low level design | Gaurav Sen](https://www.youtube.com/watch?v=gktZsX9Z8Kw&list=PLMCXHnjXnTnvQVh7WsgZ8SurU1O2v_UM7)
 - [Low level design | sudoCODE](https://www.youtube.com/watch?v=B3zrIwz_t4M&list=PLTCrU9sGybupCpY20eked6blbHI4zZ55k)
 - [Vertical Scalability vs Horizontal Scalability | Visual Explanations](https://www.youtube.com/watch?v=YE1ytf15WOQ) ✅
+- [System Design Basics: Horizontal vs. Vertical Scaling | Gaurav Sen](https://youtu.be/xpDnVSmNFX0) ✅
