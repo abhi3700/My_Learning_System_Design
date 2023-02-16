@@ -67,7 +67,15 @@
 >
 > Both are important. But, it depends on the use case. If the use case is such that the data is not changing frequently, then vertical scaling is better. But, if the data is changing frequently, then horizontal scaling is better. Moreover, keep a note of the bolded points in the table above.
 
+- [x] Cloud storage selection
+  - Amazon S3 is used for storing the video files or large files. The reasons for this are:
+    - reliability (99.999999999%) as there are multiple copies of the data stored in different AZs (Availability Zones) across the globe.
+    - high throughput during read/write
+    - low latency due to CDN
 - [ ] Rate limiting
+  - Ideally it means if there is a limit of some activity to be done in a given time period. E.g. in **TikTok**, suppose there is a limit of 3 short videos that can be uploaded in 10 hrs. So, if a user tries to upload more than 3 short videos in 10 hrs, then the user will be blocked for the next 10 hrs.
+- [ ] Low Level Design
+- [ ] High Level Design
 - [ ] Load balancing
 - [ ] Microservices
 - [ ] Monolithic vs Microservices
