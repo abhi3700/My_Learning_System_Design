@@ -4,7 +4,7 @@
 
 - Learn about System Design components
 
-## Checklist
+## Topics
 
 - [x] **CDN**
   - geographically democratize the data storage so that the data is closer to the user during read. So, for application with write/read ratio as 1:10, it is better to use CDN.
@@ -12,8 +12,12 @@
 ---
 
 - [x] **Database selection**
+
   - There are cases where relational DB is better than NoSQL DB. E.g. if the data is highly structured and the data is not changing frequently, then relational DB is better. Like in Instagram, in order to create shorts, the data is highly structured and the data is not changing frequently. So, relational (**SQL**) DB is better to store the user data. But, then there is a need to store the video metadata. So, in this case, **NoSQL** DB is better. Because it can be used to store the video metadata inclusive of video properties - thumbnail, title, description, etc. Also, NoSQL DB is good for recommendation algorithm as it can be fed into a recommendation algorithm faster due to low latency.
+
     > Note that the file (video) storage is done into Amazon S3 cloud storage here.
+
+  - **DB** storage is **NOT** recommended for image, video storage in form of encoded format. As the user grows, DB cost is going to be very high. So, it is better to store the image, video in form of encoded format in cloud storage like **Amazon S3**.
 
 ---
 
@@ -24,11 +28,11 @@
   - So, in a computer system, the processor, ram and storage are the components that can be scaled vertically.
   - In AWS, increase the **size** of the instance.
 
-  ![](../../img/system_design_vertical_scaling_aws.png)
+    ![](../../img/system_design_vertical_scaling_aws.png)
 
-  In the similar eg as previous, a bigger car has to be hired in order to accommodate more people. So, **the capacity of the car** is increased.
+  - In the similar eg as previous, a bigger car has to be hired in order to accommodate more people. So, **the capacity of the car** is increased.
 
-  ![](../../img/system_design_vertical_scaling.png)
+    ![](../../img/system_design_vertical_scaling.png)
 
 ---
 
@@ -74,6 +78,10 @@
     - low latency due to CDN
 - [ ] Rate limiting
   - Ideally it means if there is a limit of some activity to be done in a given time period. E.g. in **TikTok**, suppose there is a limit of 3 short videos that can be uploaded in 10 hrs. So, if a user tries to upload more than 3 short videos in 10 hrs, then the user will be blocked for the next 10 hrs.
+- [ ] Caching
+  - recommended to use Redis
+- [ ] Message Broker
+  - recommended to use Redis
 - [ ] Low Level Design
 - [ ] High Level Design
 - [ ] Load balancing
