@@ -25,4 +25,4 @@
 ### Videos
 
 - [Kubernetes: The Documentary [PART 1]](https://www.youtube.com/watch?v=BE77h7dmoQU) ✅
-- [Kubernetes: The Documentary [PART 2]](https://www.youtube.com/watch?v=318elIq37PE)
+- [Kubernetes: The Documentary [PART 2]](https://www.youtube.com/watch?v=318elIq37PE) ✅
