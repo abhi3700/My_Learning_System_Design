@@ -10,6 +10,12 @@
   - CoreOS wanted to take linux to the cloud level. RedHat was thinking of the same thing as well.
   - Kubernetes really started as a project to make Docker work better in the cloud. But, it turned out to be a lot more than that.
   - Kubernetes team was working very hard to make it work with Docker & wanted the community to embrace it. There were other competitors like Mesos, Swarm, etc. But, Kubernetes was the one that was able to get the community to embrace it eventually, especially after the Pokemon Go incident, which literally broke the internet. And also proved that Kubernetes was the right tool for the job in handling the load.
+  - Finally, in 2017 DockerCon (Docker's annual conference), Docker announced that they were going to be integrating Kubernetes into Docker. And that was the beginning of the end for Docker Swarm. The stack is going to look like this (sorted by the level of abstraction from TOP to BOTTOM):
+    - <kbd>High level Applications</kbd>
+    - <kbd>Orchestrator (Kubernetes)</kbd>
+    - <kbd>Containers (Docker)</kbd>
+    - <kbd>Host OS (Linux)</kbd>
+    - <kbd>Hardware (Cloud)</kbd>
   - There was no zero-sum game. All the best ideas helped in consolidating the Kubernetes.
 - Kubernetes is a container orchestration tool.
 - Each container (built using `docker` tool) can be deployed to different cloud providers like AWS, GCP, Azure, etc.

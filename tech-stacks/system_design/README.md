@@ -7,7 +7,7 @@
 ## Topics
 
 - [x] **CDN**
-  - geographically democratize the data storage so that the data is closer to the user during read. So, for application with write/read ratio as 1:10, it is better to use CDN.
+  - geographically democratize the data storage so that the data is closer to the user during read. So, for application with write/read ratio as `1:10`, it is better to use CDN.
 
 ---
 
@@ -76,6 +76,8 @@
     - reliability (99.999999999%) as there are multiple copies of the data stored in different AZs (Availability Zones) across the globe.
     - high throughput during read/write
     - low latency due to CDN
+- [ ] Cloud Function
+- [ ] CRON job
 - [ ] Rate limiting
   - Ideally it means if there is a limit of some activity to be done in a given time period. E.g. in **TikTok**, suppose there is a limit of 3 short videos that can be uploaded in 10 hrs. So, if a user tries to upload more than 3 short videos in 10 hrs, then the user will be blocked for the next 10 hrs.
 - [ ] Caching
