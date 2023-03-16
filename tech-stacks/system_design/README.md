@@ -90,6 +90,23 @@
 - [ ] Microservices
 - [ ] Monolithic vs Microservices
 - [ ] Containerization
+- [x] Prometheus
+  - Prometheus is an open-source system for monitoring and alerting. It was initially developed at SoundCloud in 2012, but since then, it has grown to be one of the most popular monitoring systems available.
+  - It is a time-series database that focuses on performance monitoring and event/alert management.
+  - **Multi-dimensional data model**: allows users to efficiently store multiple data dimensions.
+  - **Query language (PromQL)**: provides powerful querying of time-series data stored in Prometheus.
+  - **Pull-based Metrics collection**: Rather than waiting for metrics to be pushed to it, Prometheus scrapes endpoints specified by a user-defined configuration file.
+  - **Service discovery**: can automatically discover targets and provides various service discovery integrations.
+  - **Alerting**: alerts can be configured to notify users via Slack or other channels if certain thresholds are exceeded.
+  - Prometheus has become an essential part of modern cloud-native architectures alongside other tools such as Kubernetes, Istio, and Envoy. <kbd>chatGPT-3</kbd>
+- [x] RPC vs HTTP
+
+| RPC                                                                                                                                                               | HTTP                                                                                                                                                                                                                                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stands for Remote Procedure Call to have a request from client to server & waits for response from the server                                                     | stands for Hypertext Transfer Protocol, both are used for communication between client and server sides.                                                                                                                                                                                                                    |
+| `client` -> `server` function call from a remote machine. the client sends a request to the server and waits for the response.                                    | `client` <--> `server` communication. a protocol that is used by web browsers and servers to send and receive data over the internet. In HTTP, the client sends a request to the server, and the server responds with a message.                                                                                            |
+| **Advantages**: Provides better performance compared to HTTP. Supports multiple protocols like JSON-RPC, XML-RPC, etc. Less overhead due to smaller message size. | **Advantages**: Widely adopted and supported across different platforms. Supports stateless communication between the client and server. An extensive set of status codes provides more detailed information about the request/response.                                                                                    |
+| **Disadvantages**: Tight coupling between the client and the server. Difficult to implement, as you need to define the protocol for data exchange.                | **Disadvantages**: Has higher overhead due to the larger message size required. Limited flexibility compared to RPC. In summary, RPC is better suited for systems where low latency and high throughput are crucial, while HTTP is better suited for web-based applications, where compatibility and support are important. |
 
 ## References
 
