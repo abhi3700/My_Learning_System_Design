@@ -2,6 +2,11 @@
 
 Learn everything about System Design
 
+> All the learnings has to be made in respective repos like
+>
+> - Front-end + Back-end [here](https://github.com/abhi3700/My_Learning_NodeJSTS).
+> - DevOps [here](https://github.com/abhi3700/My_Learning_DevOps).
+
 ## Overview
 
 - There are different approaches to create a backend for an App. These are:
