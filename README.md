@@ -1,6 +1,6 @@
-# My_Learning_Backend
+# My_Learning_System_Design
 
-Learn everything about Backend Engineering
+Learn everything about System Design
 
 ## Overview
 
