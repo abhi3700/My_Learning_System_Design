@@ -133,7 +133,7 @@
       ![](../../img/jwt_header.png)
     - <u>payload</u>: pulls the data stored corresponding to the username/hashed_password (in server DB). Looks like this -
       ![](../../img/jwt_payload.png)
-    - <u>signature</u>: `HMACSHA256 of (encoded header + encoded payload, secret key)` The secret key can be based on symmetric/assymetric encryption method. The secret/private key has to be stored securely on sever side. Looks like this:
+    - <u>signature</u>: `HMACSHA256 of (encoded header + encoded payload, secret key)` The secret key can be based on symmetric/assymetric encryption method. The secret/private key has to be stored securely on server side. Looks like this:
       ![](../../img/jwt_signature.png)
 
   - **Token**: all 3 components are combined to form JWT. The token generation
