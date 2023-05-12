@@ -31,6 +31,29 @@ Learn everything about System Design
   - Selenium
   - Puppeteer
 
+## Tools
+
+There are beautiful designs which are normally used in the industry. And that require some tools to be used. Some of them are:
+
+- [draw.io](https://app.diagrams.net/) [FREE]
+
+  > You also have the option to change storage (local, cloud):
+
+  ![](img/drawio-storage.png)
+
+- For system design diagrams, you can use [Cloudcraft](https://cloudcraft.co/).
+
 ## References
+
+### Channels, Blogs, Websites
+
+- [ByteByteGo](https://bytebytego.com/), [YT](https://www.youtube.com/c/ByteByteGo)
+- [Gaurav Sen YT channel](https://www.youtube.com/@gkcs)
+
+### Books
+
+- [System Design by ByteByteGo](./docs/system_design_bytebytego.pdf)
+
+### Videos
 
 - [Microservices explained in 5 minutes](https://www.youtube.com/watch?v=lL_j7ilk7rc)

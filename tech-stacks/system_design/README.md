@@ -205,6 +205,12 @@
 
   More on JWT [here](../../docs/jwt-handbook-v0_14_1.pdf).
 
+- [ ] Email templating (Required for sending OTP, tokens, reset-password) using Twilio API (SMTP protocol).
+  - Use case: If developer needs to send OTP to a user, there should be a email templating done. So, the email has to be templated.
+- [ ] Kafka
+- [ ] gRPC
+- [ ] RabbitMQ
+
 ## References
 
 - [System Design YT playlist | Gaurav Sen](https://www.youtube.com/watch?v=xpDnVSmNFX0&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
