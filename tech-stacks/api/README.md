@@ -1,5 +1,7 @@
 # REST API
 
+Also, covered websockets
+
 ## Overview
 
 This is a REST API documentation for an application that allows users to create, read, update and delete (CRUD) data from a database.
@@ -64,6 +66,29 @@ Example: https://petstore.swagger.io/
 | 405  | Method Not Allowed    |
 | 409  | Conflict              |
 | 500  | Internal Server Error |
+
+## REST API vs Websockets
+
+Here are the key points from the [article](https://www.wallarm.com/what/websocket-vs-rest-api) titled "Websocket vs REST API. 💥 7 Significant Differences" from Wallarm, updated with emojis:
+
+1. REST 🔄 and WebSocket 🌐 are two key technologies that developers deal with regularly. Understanding their differences and purposes is crucial for effective utilization 🎯.
+
+2. REST is a collection of design principles or policies 📚 used extensively during web application/service development. It assists only HTTP protocol-based web application development. REST operations are stateless and standard, with every REST request created as per the HTTP verbs (GET, PUT, POST, and Delete) 📲.
+
+3. The WebSocket protocol, contrary to REST, is stateful and helps two applications in seamless data transmission or information exchange 🔄. It's based on port & sockets and works only over a TCP connection. It supports bidirectional communication, meaning the same socket/port delivers and receives the data, establishing a continuous connection 🔗.
+
+4. REST API exists to support stateless communication, where data is requested only when it's required by the web application. This is similar to the function of a vending machine 🏧, which provides goods only upon request.
+
+5. WebSocket is used when an application demands ongoing or uninterrupted data delivery, such as in a chat application 💬. In such unbroken data delivery, using REST would be resource-extensive, whereas WebSocket simplifies the job 🎛️.
+
+6. Key differences between WebSocket and REST include:
+
+   - WebSocket is stateful and bidirectional, uses sockets and ports, and is used in the development of real-time applications ⏱️. It requires a unified TCP connection for client-server data exchange.
+   - REST is stateless and unidirectional, and is useful when there is heavy request traffic for an application/solution 🚦. It requires a new TCP connection each time a request is made.
+
+7. REST is suitable when data is available on an ad-hoc basis and diversity is required 🌈. WebSocket is ideal when the application should not miss a single entry in the delivery, such as applications demanding tick data analysis or where there is high load or request traffic 📈.
+
+8. Regardless of the choice between REST and WebSocket, adopting stringent and robust API security 🔒 is a must as it leads to secure data transmission and exchange. It ensures that only secure APIs are used and data transmitted isn't in the reach of threat actors 🕵️‍♀️.
 
 ## Reference
 
