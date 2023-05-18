@@ -94,6 +94,82 @@ Here are the key points from the [article](https://www.wallarm.com/what/websocke
 
 8. Regardless of the choice between REST and WebSocket, adopting stringent and robust API security 🔒 is a must as it leads to secure data transmission and exchange. It ensures that only secure APIs are used and data transmitted isn't in the reach of threat actors 🕵️‍♀️.
 
+## Concurrency
+
+For any scalable REST APIs, concurrency is a must.
+
+### Explanation
+
+<details><summary><b>In simple words:</b></summary>
+Absolutely, I can try to explain using emojis and diagrams. However, please note that as a text-based AI, my ability to create diagrams is quite limited.
+
+In a Next.js server, when you get multiple API requests, they are like a queue of people (requests) 🚶‍♀️🚶‍♂️🚶‍♀️🚶‍♂️ waiting to be served.
+
+Let's say these people are waiting for two things: a cup of coffee ☕ and a sandwich 🥪. These are like two different API endpoints.
+
+In a normal scenario without concurrency, this would be like serving each person one by one:
+
+1. Serve coffee ☕ to the first person 🚶‍♀️
+2. Serve sandwich 🥪 to the first person 🚶‍♀️
+3. Only then move to the second person 🚶‍♂️
+
+In this scenario, every other person has to wait until the person in front of them gets both their coffee and sandwich.
+
+With concurrency, this process changes. You start making coffee and sandwiches for everyone at the same time:
+
+1. Start making coffee ☕ for the first person 🚶‍♀️
+2. Without waiting for the coffee to finish, start making a sandwich 🥪 for the first person 🚶‍♀️
+3. Without waiting for the first person's coffee or sandwich to finish, start making coffee for the second person 🚶‍♂️
+4. Continue this process for everyone in the line.
+
+In code, this would look something like this:
+
+```javascript
+import fetch from "node-fetch";
+
+export default async function handler(req, res) {
+  const urls = ["https://api.example1.com", "https://api.example2.com"];
+
+  const requests = urls.map((url) => fetch(url));
+
+  try {
+    const responses = await Promise.all(requests);
+
+    const data = await Promise.all(
+      responses.map((response) => response.json())
+    );
+
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({ error: "Something went wrong" });
+  }
+}
+```
+
+Please note, the maximum number of people (requests) you can serve at once depends on how many baristas (server resources) you have. If you have more people than your baristas can handle, you might need more baristas (upgraded hardware, more servers, etc.).
+
+I hope this helps! Let me know if you have any other questions.
+
+</details>
+
+<details><summary><b>In technical terms:</b></summary>
+
+In this example, the API endpoint defined in Next.js sends two requests to different URLs concurrently. `Promise.all` is used to wait for all of the requests to complete. The responses are then converted to JSON concurrently, and the resulting data is sent back as the response to the original request.
+
+Note that while Node.js is single-threaded, it can handle many requests concurrently thanks to its non-blocking IO operations and the event loop. However, CPU-bound tasks (like heavy computations) are still blocking in Node.js. Therefore, if you have CPU-bound tasks in your API endpoints, they could potentially block other requests. In such cases, you might want to consider offloading those tasks to worker threads or a separate service.
+
+It's also worth noting that there are limits to how many concurrent connections a single Node.js server can handle, which are influenced by factors like the server's hardware and the Node.js configuration. If you need to handle a very high number of concurrent connections, you might need to use techniques like clustering or horizontal scaling.
+
+</details>
+
+### Languages
+
+It can be achieved by incorporating
+
+- **Node**: `Promises.all` in NodeJS frameworks
+- **Rust**: adding multiple worker threads in `actix-web` (by default it uses max. CPU cores) for REST APIs. [Example](https://github.com/abhi3700/My_Learning-Rust/tree/main/libs/databases/pgsql/demo)
+  > For websockets, use `actix` crate for concurrency actor model.
+
 ## Reference
 
 - [OpenAPI Specification](https://swagger.io/specification/)
