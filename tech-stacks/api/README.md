@@ -69,6 +69,10 @@ Example: https://petstore.swagger.io/
 
 ## REST API vs Websockets
 
+![](../../img/rest-api.png)
+
+![](../../img/websockets.png)
+
 Here are the key points from the [article](https://www.wallarm.com/what/websocket-vs-rest-api) titled "Websocket vs REST API. 💥 7 Significant Differences" from Wallarm, updated with emojis:
 
 1. REST 🔄 and WebSocket 🌐 are two key technologies that developers deal with regularly. Understanding their differences and purposes is crucial for effective utilization 🎯.
