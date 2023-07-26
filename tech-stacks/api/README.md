@@ -31,7 +31,8 @@ VSCode - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=ra
 ## API data
 
 - Free fake API for testing and prototyping: [Todo list](https://jsonplaceholder.typicode.com/todos)
-- Create your API on this
+
+[API list](https://github.com/abhi3700/my_coding_toolkit/blob/main/api.md)
 
 ## OpenAPI Specification
 
