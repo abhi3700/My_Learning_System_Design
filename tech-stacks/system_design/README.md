@@ -230,3 +230,4 @@ The former is the process of verifying **who a user is**, while the latter is th
 - [Difference between cookies, session and tokens](https://www.youtube.com/watch?v=GhrvZ5nUWNg) ✅
 - [Cookies, Sessions, JSON Web Tokens (JWT) and More](https://www.youtube.com/watch?v=uXDnS5PcjCA)
 - [System Design Primer ⭐️: How to start with distributed systems?](https://www.youtube.com/watch?v=SqcXvc3ZmRU&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=2) ✅
+- [High Level Design from Basics to Advanced](https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7)

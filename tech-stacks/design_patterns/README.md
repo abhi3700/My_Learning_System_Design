@@ -47,5 +47,5 @@ Hence, these should be kept in mind while applying the design patterns.
 
 ## References
 
-- [Design Patterns | Concept && Coding](https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7)
+- [Refactoring Guru Design Patterns](https://refactoring.guru/design-patterns)
 - [What are Design Patterns? | Design Patterns 101 | System Design | 2022 | Yogita Sharma](https://www.youtube.com/watch?v=FM_pRefVCB4) ✅
