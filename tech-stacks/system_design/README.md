@@ -78,25 +78,30 @@ It is the process of increasing or decreasing the capacity of a cloud environmen
     - high throughput during read/write
     - low latency due to CDN
 - [ ] Cloud Function
-- [ ] CRON job
-- [ ] Rate limiting
+- [x] CRON job
+  - Time-based job scheduler in cloud environment.
+  - E.g. in **TikTok**, suppose there is a need to delete the user's data after 30 days of inactivity. So, a CRON job is used to delete the user's data after 30 days of inactivity.
+- [x] Rate limiting
   - Ideally it means if there is a limit of some activity to be done in a given time period. E.g. in **TikTok**, suppose there is a limit of 3 short videos that can be uploaded in 10 hrs. So, if a user tries to upload more than 3 short videos in 10 hrs, then the user will be blocked for the next 10 hrs.
-- [ ] Caching
+- [x] Caching
   - recommended to build using Redis as it is an in-memory DB.
-- [ ] Message Broker
+- [ ] Message Broker (RabbitMQ, Kafka)
+  - Kafka is preferred over RabbitMQ as it is more scalable & faster & offers more features.
   - recommended to build using Redis
 - [ ] MongoDB architecture
 - [ ] PostgreSQL architecture
 - [ ] NextJS vs NestJS
-- [ ] Low Level Design
+  - NextJS is a full-stack framework for building server-side rendered (SSR) React applications. It's for both FE & BE.
+  - NestJS is a progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications like APIs.
+- [ ] High Level Design (HLD)
+- [x] Low Level Design (LLD)
   - More code oriented like
     - whether to use OOP, Functional paradigm, etc.
     - the design patterns like Singleton, Factory, etc.
     - data modelling
     - which language to use for which component like Rust for backend, React/React Native for frontend, etc.
-- [ ] High Level Design
 - [ ] Load balancing
-  - Acts like router to distribute the traffic across multiple servers to avoid single point of failure.
+  - Acts like router to distribute the traffic across multiple API servers to avoid single point of failure.
 - [ ] Microservices
 - [ ] Monolithic vs Microservices
 - [ ] Containerization
@@ -112,6 +117,10 @@ It is the process of increasing or decreasing the capacity of a cloud environmen
 - [ ] Email templating (Required for sending OTP, tokens, reset-password) using Twilio API (SMTP protocol).
   - Use case: If developer needs to send OTP to a user, there should be a email templating done. So, the email has to be templated.
 - [ ] Kafka
+  - It is a distributed streaming platform that allows you to build scalable, durable, and fault-tolerant systems.
+  - **Guaranteed delivery**: Suppose, there is a need to send OTP to a user. So, the OTP has to be sent to the user's email. But, the user's email is not guaranteed to be reachable at that moment. So, Kafka is used to send the OTP to the user's email. Kafka is like a middleman which will retry sending the OTP to the user's email until it is successful.
+  - **Data streaming**: Another user case is in **TikTok**, when a user uploads a video, it has to be processed further. So, the video has to be sent to the processing system. But, the processing system is not guaranteed to be reachable at that moment. So, Kafka is used to send the video to the processing system. Kafka is like a middleman which will retry sending the video to the processing system until it is successful.
+  - **Data replication**: Another use case is when there is a need of updating multiple DB tables/docs after a payment is made. So, Kafka is used to send the payment details to the multiple DB tables/docs. Kafka is like a middleman which will retry sending the payment details to the multiple DB tables/docs until it is successful.
 - [ ] gRPC
 - [ ] RabbitMQ
 
@@ -123,6 +132,27 @@ It is the process of increasing or decreasing the capacity of a cloud environmen
 | `client` -> `server` function call from a remote machine. the client sends a request to the server and waits for the response.                                    | `client` <--> `server` communication. a protocol that is used by web browsers and servers to send and receive data over the internet. In HTTP, the client sends a request to the server, and the server responds with a message.                                                                                            |
 | **Advantages**: Provides better performance compared to HTTP. Supports multiple protocols like JSON-RPC, XML-RPC, etc. Less overhead due to smaller message size. | **Advantages**: Widely adopted and supported across different platforms. Supports stateless communication between the client and server. An extensive set of status codes provides more detailed information about the request/response.                                                                                    |
 | **Disadvantages**: Tight coupling between the client and the server. Difficult to implement, as you need to define the protocol for data exchange.                | **Disadvantages**: Has higher overhead due to the larger message size required. Limited flexibility compared to RPC. In summary, RPC is better suited for systems where low latency and high throughput are crucial, while HTTP is better suited for web-based applications, where compatibility and support are important. |
+
+### HTTP vs HTTPS
+
+![](../img/https_client_server.png)
+
+- HTTPS is "HTTP + TLS (formerly SSL) certificate". The TLS layer ensures encrypted communication and authentication via certificates.
+- What is encrypted?
+  - The communication channel between the client & server as the data is encrypted (from both sides) before sending.
+- Why Bidirectional Encryption?
+  - <u>Confidentiality</u>: Both requests and responses are protected from interception or eavesdropping.
+  - <u>Data Integrity</u>: Encryption ensures that the data cannot be tampered with during transmission.
+  - <u>Authentication</u>: Ensures both parties are communicating securely after the TLS handshake.
+  
+  So, both sides (client and server) encrypt their respective data before sending, ensuring secure communication in both directions.
+- What is authenticated?
+  - Client authenticates Server's identity using server's TLS certificate (needed for HTTPS server issued by CA).
+  - Server authenticates Client's identity using the server-generated JWT token corresponding to the user (when they login).
+- HTTPS is more secure than HTTP as it encrypts the data exchanged between the client & server.
+- As assymetric encryption is slower than symmetric encryption, so the server uses asymmetric encryption only for sharing the session symmetric key. And once the symmetric key is shared, the server uses symmetric encryption for the rest of the data exchange especially done for large scale data exchange.
+
+Watch this [YT short](https://youtube.com/shorts/vtSylT1aC78?si=LeZtcHJBGIXsf7Zj).
 
 ### Authentication vs Authorization
 

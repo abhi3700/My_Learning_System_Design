@@ -1,0 +1,118 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram id="GhMkBksMwBSkeBIsgrJ5" name="HTTPS">
+    <mxGraphModel dx="2150" dy="2126" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-260" y="-130" width="970" height="830" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=3;fillColor=#e1d5e7;strokeColor=#00CCCC;" parent="1" vertex="1">
+          <mxGeometry x="227" y="90" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Server" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;imageBorder=default;dashed=1;dashPattern=1 1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Client" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/laptop_client.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="216" y="185" width="45" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="660" as="sourcePoint" />
+            <mxPoint x="239.5" y="235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="660" as="sourcePoint" />
+            <mxPoint x="253" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="Sends &quot;hello&quot;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8" vertex="1" connectable="0">
+          <mxGeometry x="0.0267" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="352" as="sourcePoint" />
+            <mxPoint x="240" y="352" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="Sends &quot;hello&quot; + server&#39;s certificate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="10" vertex="1" connectable="0">
+          <mxGeometry x="0.02" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;On receiving, selects&amp;nbsp;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 10px;&quot;&gt;- TLS version&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 10px;&quot;&gt;- Encryption algorithm&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="545" y="247" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="240" y="425" as="sourcePoint" />
+            <mxPoint x="540" y="425" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="Using the server&#39;s p&lt;sub&gt;k&amp;nbsp;&lt;/sub&gt;from the certificate&lt;div&gt;the client sends its p&lt;sub&gt;k&lt;/sub&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="13" vertex="1" connectable="0">
+          <mxGeometry x="-0.2667" y="2" relative="1" as="geometry">
+            <mxPoint x="40" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="&lt;div&gt;Validates the certificate.&lt;/div&gt;&lt;div&gt;if valid:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;handshake begins&lt;br&gt;&lt;/div&gt;&lt;div&gt;else:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;connection terminated&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;browser shows &quot;Certificate Error&quot;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="55" y="307" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Certificate" style="points=[[0.015,0.015,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[0.985,0.015,0],[1,0.22,0],[1,0.44,0],[1,0.67,0],[0.985,0.89,0],[0,0.22,0],[0,0.44,0],[0,0.67,0],[0.015,0.89,0],[0.25,0.91,0],[0.5,0.91,0],[0.785,0.955,0]];verticalLabelPosition=top;sketch=0;html=1;verticalAlign=bottom;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.x509_certificate;fillColor=#005073;strokeColor=none;labelPosition=center;" parent="1" vertex="1">
+          <mxGeometry x="480" y="90" width="42.11" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="19" target="4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="When server is hosted, TLS certificate&amp;nbsp;&lt;div&gt;is bought with validity period to deploy with HTTPS enabled.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="17" vertex="1" connectable="0">
+          <mxGeometry x="-0.3079" y="-1" relative="1" as="geometry">
+            <mxPoint y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" value="Certificate Authority (CA)" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=default;fontSize=12;spacingTop=3;image=img/lib/ibm/blockchain/certificate_authority.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="354" y="-80" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="" style="group;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-240" y="270" width="270" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;strong style=&quot;background-color: initial;&quot;&gt;Issuer:&lt;/strong&gt;&lt;span style=&quot;background-color: initial;&quot;&gt; Is the certificate issued by a trusted Certificate Authority (CA)? CAs are trusted entities in the PKI that validate the identity of the server.&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;strong style=&quot;font-size: 8px;&quot;&gt;Validity Period:&lt;/strong&gt; Is the certificate still valid (not expired)?&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;strong style=&quot;font-size: 8px;&quot;&gt;Hostname Matching:&lt;/strong&gt; Does the certificate&#39;s Common Name (CN) or Subject Alternative Name (SAN) match the requested domain?&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;strong style=&quot;font-size: 8px;&quot;&gt;Certificate Chain:&lt;/strong&gt; Is the chain of trust intact, leading to a root CA?&lt;/li&gt;" style="whiteSpace=wrap;html=1;align=left;fontSize=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="20" vertex="1">
+          <mxGeometry y="25" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="The client validates the server&#39;s certificate by checking:" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="20" vertex="1">
+          <mxGeometry width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="If all these checks pass, the client trusts that&amp;nbsp;&lt;div&gt;it is communicating with the legitimate server.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="20" vertex="1">
+          <mxGeometry y="95" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="For modern systems, it is recommended to&amp;nbsp;&lt;div&gt;use ECDHE Key exchange algorithm.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" parent="1" vertex="1">
+          <mxGeometry x="-220" y="470" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="Now, the communication channel&amp;nbsp;&lt;div style=&quot;font-size: 11px;&quot;&gt;b/w them is HTTPS enabled.&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;Hence, anything can be sent to &amp;amp; fro&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;in an encrypted manner.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#3A5431;fillColor=#6d8764;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="300" y="450" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="540" y="541" as="sourcePoint" />
+            <mxPoint x="240" y="541" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" value="Sends &quot;Ok&quot;.&lt;div&gt;Also, might share JWT as session key.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="26" vertex="1" connectable="0">
+          <mxGeometry x="0.0311" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
