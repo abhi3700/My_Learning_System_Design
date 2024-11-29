@@ -81,6 +81,8 @@ It is the process of increasing or decreasing the capacity of a cloud environmen
 - [x] CRON job
   - Time-based job scheduler in cloud environment.
   - E.g. in **TikTok**, suppose there is a need to delete the user's data after 30 days of inactivity. So, a CRON job is used to delete the user's data after 30 days of inactivity.
+- [x] WebSocket
+  - It is a protocol that enables real-time, bidirectional communication between the client and server. [Video](https://www.youtube.com/shorts/njCnO2yA5hM).
 - [x] Rate limiting
   - Ideally it means if there is a limit of some activity to be done in a given time period. E.g. in **TikTok**, suppose there is a limit of 3 short videos that can be uploaded in 10 hrs. So, if a user tries to upload more than 3 short videos in 10 hrs, then the user will be blocked for the next 10 hrs.
 - [x] Caching
